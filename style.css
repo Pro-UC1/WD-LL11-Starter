@@ -25,3 +25,32 @@ body {
     max-width: 300px;
   }
   
+  #grouped-stations {
+    background: rgba(255,255,255,0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+  
+  .city-group {
+    margin-bottom: 2rem;
+  }
+  
+  .city-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2a4d2e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .station-list {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .station-list li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #cce0cc;
+  }

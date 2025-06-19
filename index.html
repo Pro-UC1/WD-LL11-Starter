@@ -43,13 +43,37 @@
     <section id="grouped-stations">
       <h2>Stations Grouped by City</h2>
         <!-- Grouped content will render here -->
-
-        
+        <div id="grouped-content"></div>
     </section>
   </main>
 
   <script src="data.js"></script>
   <script src="dom.js"></script>
   <script src="script.js"></script>
+  <script>
+    function renderGroupedStations() {
+      const grouped = groupStationsByCity();
+      const container = document.getElementById('grouped-content');
+      container.innerHTML = '';
+      Object.keys(grouped).forEach(city => {
+        const cityDiv = document.createElement('div');
+        cityDiv.className = 'city-group';
+        cityDiv.innerHTML = `<div class="city-title">${city}</div>
+          <ul class="station-list">
+            ${grouped[city].map(station => `<li>${station.name}</li>`).join('')}
+          </ul>`;
+        container.appendChild(cityDiv);
+      });
+    }
+  </script>
 </body>
 </html>
+
+<style>
+body {
+  background-image: url('park.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+</style>

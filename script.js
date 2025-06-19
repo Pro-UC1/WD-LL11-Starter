@@ -4,10 +4,7 @@ function addStations(stations) {
   for (let i = 0; i < stations.length; i++) {
     addStationElement(stations[i]);
   }
-
-
   
-
 }
 
  
